@@ -1,0 +1,42 @@
+<ng-include ng-controller = "navBarController" src="'views/header.html'"></ng-include>
+
+<div layout="row" layout-xs="column" layout-align="center center">
+
+    <div flex = "40" >
+
+			<div id="pricing-table" class="clear">
+			    <div class="plan" ng-repeat = "inventory in inventoryList">
+			        <h3>{{inventory.productName}}<span>{{inventory.quantity}}</span></h3>
+			        <md-button ng-click = "startAuctionPopup(inventory.quantity, inventory.productName)" class="md-warn">Auction</md-button>         
+			    </div>
+
+			</div>
+
+    </div>
+
+    <div flex = "60" class = "auction-box">
+		  <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch >
+	        <md-card-title>
+	          <md-card-title-text>
+	            <span class="md-headline">Current Auction</span>
+	            <span class="md-subhead">By {{auctionSellerUsername}}</span>
+	          </md-card-title-text>
+<!-- 	          <md-card-title-media>
+	            <div class="md-media-lg card-media"></div>
+	          </md-card-title-media> -->
+	        </md-card-title>
+	        <md-card-content> 
+	        	<p>Quantity: {{auctionQuantity}}</p> 
+	        	<p>Min Bid: {{auctionMinBid}}</p>
+	    	</md-card-content>
+	        <md-card-actions layout="row" layout-align="end center">
+	          <md-button>Place Bid</md-button>
+	        </md-card-actions>
+	      </md-card>
+
+	      <!-- <h4 ng-show ="!showAuctionPanel">No Current Auction at the moment</h4> -->
+    </div>
+
+
+
+</div>

@@ -1,0 +1,33 @@
+{
+  "db": {
+    "database": "crossOverTrial",
+    "username": "root",
+    "password": "h0Sjxi9B",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "server": {
+    "baseUrl": "http://localhost"
+  },
+  "logging": {
+    "transports": {
+      "console": {
+        "enabled": true,
+        "level": "info"
+      },
+      "file": {
+        "enabled": true,
+        "server": {
+          "info": "/var/log/crossover/user-data-api-info.log",
+          "debug": "/var/log/crossover/user-data-api-debug.log",
+          "error": "/var/log/crossover/user-data-api-error.log"
+        }
+      }
+    },
+    "logPath": "/var/log/crossover",
+    "maxFiles": 100,
+    "maxSize": 1048576
+  },
+  "allowedLoginAttempts": 5,
+  "loginAttemptsBlockingTime": 3600000
+}

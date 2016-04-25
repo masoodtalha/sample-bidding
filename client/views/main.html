@@ -1,0 +1,26 @@
+<ng-include ng-controller = "navBarController" src="'views/header.html'"></ng-include>
+
+
+<div layout="row" layout-xs="column" layout-align="center center" class="position-container">
+
+  
+    <div flex = "75" class = "position-login-field">
+    <form name="userLoginForm" novalidate>
+      <md-input-container class="md-block" flex-gt-xs>
+          <label>Username</label>
+          <input ng-model="username" type="text" required>
+          <div class="signup-error-msg-placement" ng-messages="propertyPurposeForm.username.$error" md-auto-hide="true" ng-show = "userFormSubmitted">
+            <div ng-message="required" >
+                Please enter username.
+            </div>
+          </div>
+      </md-input-container>
+
+    </div>
+
+    <div flex = "25">
+      <md-button ng-click="loginOrRegister()" ng-disabled="false" class="md-raised md-primary">Enter</md-button>
+    </div>
+  </form>
+
+</div>

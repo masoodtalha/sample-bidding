@@ -1,0 +1,69 @@
+{
+  "aws": {
+    "accessKeyId": "",
+    "region": "us-west-2",
+    "secretAccessKey": ""
+  },
+  "db": {
+    "users": "mongodb://localhost:27017/users?ssl=false",
+    "taskqueue": "mongodb://localhost:27017/taskqueue?ssl=false"
+  },
+  "server": {
+    "baseUrl": "http://localhost",
+    "USERAPIBASEURL" : "http://127.0.0.1:3005"
+  },
+  "TOKEN_SECRET":"I fucking love Pakistan",
+  "logging": {
+    "transports": {
+      "console": {
+        "enabled": true,
+        "level": "debug"
+      },
+      "file": {
+        "enabled": true,
+        "server": {
+          "info": "/var/log/zencribs/user-data-api-info.log",
+          "debug": "/var/log/zencribs/user-data-api-debug.log",
+          "error": "/var/log/zencribs/user-data-api-error.log"
+        }
+      }
+    },
+    "logPath": "/var/log/zencribs",
+    "maxFiles": 100,
+    "maxSize": 1048576
+  },
+  "newrelic": {
+    "app_name": "user-data-api@dev",
+    "license_key": ""
+  },
+  "twilio": {
+    "phoneNumber": "13213123123123",
+    "sid": "342432423432432423",
+    "token": "4324234234242424"
+  },
+  "fbCognitoConfig": {
+    "clientID": "1577974479192147",
+    "clientSecret": "1586ef7c5dfdd58dab845cf943a8f299",
+    "callbackURL": "http://localhost:3000/auth/facebook/callback",
+    "profileFields": [
+      "id",
+      "email"
+    ],
+    "AWS_ACCOUNT_ID": "031860223059",
+    "AWS_Region": "us-east-1",
+    "COGNITO_IDENTITY_POOL_ID": "us-east-1:a4a6634b-f08a-4c1d-93ac-61c85e3526b6",
+    "IAM_ROLE_ARN": "arn:aws:iam::031860223059:role/Cognito_zencrinsAuth_Role",
+    "FACEBOOK_APP_ID": "1061244480560138",
+    "FACEBOOK_APP_SECRET": "02bbf240c5475ad8f1731bf1fbe8a654"
+  },
+  "googleAuth": {
+    "CLIENTID": "1044464740873-uest4g3gss61vvb7qjehlvt5cvf802c7.apps.googleusercontent.com",
+    "CLIENTSECRET": "xPCEYX4jKhMRdFVIKAkSlGIz",
+    "CALLBACKURL": "http://localhost:3000/auth/google/callback",
+    "ROLEARN": "arn:aws:iam::031860223059:role/Cognito_zencribsgoogleAuth_Role",
+    "COGNITO_IDENTITY_POOL_ID" : "us-east-1:46bab1e8-7318-4614-a68b-6ee4b0a8b08a",
+    "AWS_ACCOUNT_ID": "031860223059",
+    "AWS_REGION": "us-east-1"
+  }
+
+}

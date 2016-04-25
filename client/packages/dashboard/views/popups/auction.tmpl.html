@@ -1,0 +1,36 @@
+<md-dialog aria-label="Mango (Fruit)"  ng-cloak>
+
+  <form name = "startAuctionForm">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Create Auction </h2>
+        <span flex></span>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <h5>Please specify the details below</h5>
+        <p ng-show = "isQtyExceed" style="color: red;">The provided Quantity is more than available</p>
+        <p ng-show = "fieldsMissing" style="color: red;">Some of the fields are missing</p>
+
+        <p ng-show = "auctionProgress" style="color: red;">An Auction in Progress please wait</p>
+        <p>
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Item Quantity</label>
+            <input ng-model="quantity" type = "number" required>
+          </md-input-container>
+        </p>
+        <p>
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Minimum Bid</label>
+            <input ng-model="minBid" type = "number" required>
+          </md-input-container>
+        </p>
+
+        <p>
+          <md-button ng-disabled="false" ng-click="startAuction()" class="md-primary">Start Auction</md-button>
+        </p>
+      </div>
+    </md-dialog-content>
+  </form>
+</md-dialog>
